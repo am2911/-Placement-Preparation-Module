@@ -1,0 +1,14 @@
+class Solution:
+    def countAsterisks(self, s: str) -> int:
+        bar=0
+        count=0
+        for i in range(len(s)):
+            if s[i]=="|":
+                bar+=1
+            if bar==2:
+                bar=0
+            if bar==0 and s[i]=="*":
+                count+=1
+        return count
+            
+            
