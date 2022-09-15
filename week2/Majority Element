@@ -1,0 +1,23 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        """
+        count={}
+        for num in nums:
+            if num not in count:
+                count[num]=1
+            if count[num]>len(nums)//2:
+                return num
+            else:
+                count[num]+=1
+        
+        """
+        dic={}
+        for i in range(len(nums)):
+            dic[nums[i]]=1+dic.get(nums[i],0)
+        sort=sorted(dic,key=dic.get,reverse=True)
+        return sort[0]
+       
+        """
+        nums.sort()
+        return nums[len(nums)//2]
+  """
