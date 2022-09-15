@@ -1,0 +1,7 @@
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        res=set()
+        per=permutations(nums)
+        for i in list(per):
+            res.add(i)
+        return res
